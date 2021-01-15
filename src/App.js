@@ -21,27 +21,26 @@ function App() {
 //     otherFn = () => {
 // //         [...within this other function now I still have access to this.state.listDataFromChild...]
 //     }
-    const [value,setText] = React.useState("Placeholder");
+    const [value,setText] = React.useState("");
     
 
     return (
         <div className="App">
-        <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <p>
-            Edit <code>src/App.js</code> and save to reload.
-            </p>
-            <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-            >
-            Learn React
-            </a>
-            <TellThis value={value} setText={setText}/>
-            <SayThis text={value}/>
-        </header>
+            <header className="App-header">
+                <div className="container">
+                    <div className="row" style={{marginTop: '5%', textAlign: 'center'}} >
+                        <a href="/" style={{color: "#bfbfbf", textDecoration: "none"}}>
+                        <h1>Game of life</h1>
+                        <h6>Go find yourself!</h6>
+                        </a>
+                    </div>
+                </div>
+                <div className="row" style={{marginTop: "3%"}}>
+                    <TellThis gapSize="50px" value={value} setText={setText} placeholder = "Columns"/>
+                    <TellThis gapSize="35px" value={value} setText={setText} placeholder = "Rows"/>
+                </div> 
+                <SayThis text={value}/> 
+            </header>
         </div>
   );
 }
