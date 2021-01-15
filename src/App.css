@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+.campo {
+    margin-top: 30px;
+}
