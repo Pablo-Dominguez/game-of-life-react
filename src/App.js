@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import SayThis from "./Say.js";
 import TellThis from "./Tell.js";
+import Canvas from './Canvas'
 import React from "react";
 
 // class App extends React.Component {
@@ -40,6 +41,7 @@ function App() {
                     <TellThis gapSize="35px" value={value} setText={setText} placeholder = "Rows"/>
                 </div> 
                 <SayThis text={value}/> 
+                <Canvas rows="30"/>
             </header>
         </div>
   );
